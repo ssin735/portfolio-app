@@ -50,7 +50,7 @@
 }
 
 body{
-  font-family:"Amatic SC" sans-serif;
+  font-family:"Amatic SC" sans-serif !important;
 }
 
 /* NavBar */
@@ -85,6 +85,13 @@ nav ul li{
   max-width: 17.25rem;
   padding: 0 !important;
   height: 6rem !important;
+}
+
+@media(max-width:768px){
+  .navbar-brand{
+    width: 7rem;
+
+  }
 }
 
 .navbar-nav >li> a.active, .navbar-nav> li>a.active:focus{
@@ -176,5 +183,33 @@ z-index: 1;
 @media(max-width:768p){
   .particles-canvas{
     display: none;
+  }
+}
+
+/* ------ ABOUT ME ------- */
+
+.photo-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.profile-img{
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  padding: .3rem;
+
+  border: 1px solid var(--primary-coral)
+
+}
+.about-heading{
+  color: var(--primary-coral);
+  text-transform: uppercase;
+}
+@media(max-width:468px){
+  .profile-img{
+    width: 10rem;
   }
 }
