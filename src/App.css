@@ -37,12 +37,14 @@
   }
 }
 
-/*********************************************/
+/*-------------------- Root (variables and global css/bootstrap stuffs)-----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 :root{
   --primary-white: #ffffff;
   --primary-light-gray:#f4f4f4;
+  --primary-gray:#ccd1d9;
+  --primary-dark-gray:#666666;
   --primary-orange:#f9ab00;
   --primary-coral: coral;
   --primary-dark:rgb(52,58,64);
@@ -54,7 +56,7 @@ body{
   font-family:"Amatic SC" sans-serif !important;
 }
 
-/* NavBar */
+/*--------------------- Navigation Bar -------------------*/
 .logo{
   width: 4.25rem ;
 }
@@ -103,7 +105,7 @@ nav ul li{
   border-top: 0.1875rem solid var(--primary-coral);
 }
 
-/*********************************************/
+/*------------------------- Home Page ----------------------------*/
 
 .header-wraper{
   position: relative;
@@ -138,7 +140,7 @@ text-transform: uppercase;
 
 }
 
-/* ------ TYPED TEXT ------- */
+/* ------ TYPED TEXT Library ------- */
 .typed-text{
   font-size: 2rem;
   color: var(--primary-white);
@@ -154,7 +156,7 @@ text-transform: uppercase;
   }
 }
 
-/* Header Main Offer */
+/* ------ Main Heading on Home --------- */
 .btn-main-offer{
   border: 1px solid var(--primary-red);
   text-transform: uppercase;
@@ -197,11 +199,10 @@ z-index: 1;
 }
 
 .profile-img{
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
   padding: .3rem;
-
+  border-radius: 50%;
   border: 1px solid var(--primary-coral)
 
 }
@@ -215,7 +216,7 @@ z-index: 1;
   }
 }
 
-/* -----------------SERVICES -----------*/
+/* -----------------SERVICES ----------- */
 
 .services{
   text-align: center;
@@ -269,4 +270,160 @@ height: 3.125rem;
 
 .services .box:hover p{
   color: var(--primary-white);
+}
+
+/*------------EXPERIENCE----------*/
+
+.experience-wrapper{
+  position: absolute;
+  padding: 3.125rem 0;
+  overflow: hidden;
+}
+
+.experience h1{
+  text-transform: uppercase;
+  color: var(--primary-coral);
+}
+
+.experience-wrapper::before{
+  position: relative;
+  content: "";
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+  width: 0.125rem;
+  height: 100%;
+  background: var(--primary-gray);
+  z-index: 1;
+}
+
+.timeline-block{
+  width: calc(50% + 0.5rem) ;
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right{
+  float: right;
+}
+.timeline-block-left{
+  float: left;
+  direction: rtl;
+}
+
+.marker{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.3125rem solid var(--primary-coral);
+  margin-top: 0.625rem;
+  z-index: 3;
+}
+
+.timeline-content{
+  width: 95%;
+  padding: 0 0.9375rem;
+  color: var(--primary-dark-gray);
+  direction: ltr;
+}
+.timeline-content h3{
+  margin-top: 0.3125rem;
+  color: var(--primary-red);
+  font-weight: 900%;
+}
+
+/*---------- CONTACTS ---------*/
+.contacts{
+background: var(--primary-dark);
+padding: 3rem 0;
+}
+
+.contacts h1{
+  text-transform: uppercase;
+  color: var(--primary-coral);
+  padding: 1.3rem 0;
+
+}
+.contacts p{
+  color: var(--primary-light-gray);
+  font-size: 1.2rem;
+}
+
+/*---------------Contact Inputs---------------------*/
+
+.contacts input, .contacts textarea{
+  width: 100%;
+  box-sizing: border-box;
+  background: none;
+  resize: none;
+  border: 0;
+  border-bottom: 0.125rem solid var(--primary-dark-gray);
+  border-radius: 0;
+  color: var(--primary-coral);
+  outline: 0  !important;
+  box-shadow: none !important;
+  margin-bottom: 1rem;
+  padding-left: 0 !important;
+
+}
+
+.contacts .container{
+  padding: 4rem 0;
+}
+
+
+.contacts input:focus, .contacts textarea:focus{
+  background: transparent;
+  color: var(--primary-coral);
+  border-bottom: 0.125rem solid var(--primary-dark-gray);
+}
+
+.contacts textarea {
+  height: 12.2rem !important;
+}
+
+.contacts-btn{
+  margin: 1rem 0 0 0;
+  width: 100%;
+  background: none;
+}
+
+.line{
+  position: relative;
+  top:-0.8rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--primary-coral);
+  display: inline-block;
+}
+
+input:focus+.line, textarea:focus+.line{
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+input.form-control{
+  margin:-0.3rem 0;
+}
+textarea.form-control{
+  margin:-0.3rem 0;
+}
+
+
+
+/*--------- media for contacts ---------*/
+@media(max-width:768px){
+
+  .contacts{
+    overflow-x: hidden;
+  }
+
+  .contacts   .container{
+    padding: 0 1rem;
+  }
+  .contacts p{
+    padding: 0 0.4rem;
+  }
+
 }

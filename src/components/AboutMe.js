@@ -12,7 +12,7 @@ const AboutMe = () => {
                 </div>
                 <div className="col-lg-6 col-xm-12">
                     <h1 className="about-heading"> about me </h1>
-                <p> Hi, I am Snehil. I am a Software Engineer who enjoys making aesthetic applications for mobile phones and the web. I also dabble in website designing and developing games. I try to keep myself informed of recent technologies and trends.</p>
+                <p> Hi, I am Snehil. </p> <p> I enjoy creating aesthetic applications for mobile phones and the web. I also dabble in website designing. I try to keep myself informed of recent technologies and trends.</p>
                 </div>
                 
             </div>
